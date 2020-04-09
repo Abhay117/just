@@ -162,7 +162,7 @@ def create_tokenizer(descriptions):
 tokenizer = create_tokenizer(train_descriptions)
 dump(tokenizer, open('tokenizer.p', 'wb'))
 vocab_size = len(tokenizer.word_index) + 1
-vocab_size
+
 
 #calculate maximum length of descriptions
 def max_length(descriptions):
@@ -170,7 +170,7 @@ def max_length(descriptions):
     return max(len(d.split()) for d in desc_list)
     
 max_length = max_length(descriptions)
-max_length
+
 
 
 from keras.utils import plot_model
